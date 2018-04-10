@@ -1,0 +1,2 @@
+ios: open ios/GithubBrowser.xcodeproj/
+debugger: open "rndebugger://set-debugger-loc?host=localhost&port=8081"
