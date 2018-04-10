@@ -33,6 +33,7 @@ class Feed extends Component{
 
     fetchFeed(){
         AuthService.getAuthInfo((err, authInfo)=>{
+            // 'robbyoconnor'
             var url = 'https://api.github.com/users/'
                     + authInfo.user.login
                     + '/received_events';

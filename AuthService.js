@@ -19,6 +19,7 @@ class AuthService{
             }
 
             var zippedObj = _.zipObject([val[0][0], val[1][0]], [val[0][1], val[1][1]]);
+
             if(!zippedObj[authKey]){
                 return callback()
             }
@@ -29,6 +30,9 @@ class AuthService{
                 },
                 user: JSON.parse(zippedObj[userKey])
             }
+
+            console.log("LOADED INFO", authInfo);
+
             return callback(null, authInfo);
         })
     }
@@ -43,6 +47,7 @@ class AuthService{
             }
         })
         .then((res)=>{
+            console.log("RES: ", res);
             if (res.status >= 200 && res.status <= 300) {
                 return res
             }

@@ -37,9 +37,10 @@ class App extends Component{
 
     componentDidMount(){
         AuthService.getAuthInfo((err, authInfo)=>{
+            console.log("HERERHERHEHRm, ", authInfo);
             this.setState({
                 checkingAuth: false,
-                isLoggedIn: authInfo.user != null
+                isLoggedIn: authInfo != null
             })
         })
     }
