@@ -35,7 +35,8 @@ class Feed extends Component{
         AuthService.getAuthInfo((err, authInfo)=>{
             // 'robbyoconnor'
             var url = 'https://api.github.com/users/'
-                    + authInfo.user.login
+                    //+ authInfo.user.login
+                    + 'robbyoconnor'
                     + '/received_events';
 
             fetch(url, {
@@ -70,7 +71,7 @@ class Feed extends Component{
             >
                 <View style={styles.renderBlock}>
                     <Image source={{ uri: rowData.actor.avatar_url }}
-                           style={styles.renderRowImage}
+                           style={ styles.renderRowImage }
                     />
                     <View style={styles.renderRowContainer}>
                         <Text style={{backgroundColor: '#fff'}}>
